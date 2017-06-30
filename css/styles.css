@@ -1,3 +1,10 @@
+.col {
+  border: 1px solid black;
+  padding: .3em;
+  margin: 0 .3em; }
 
+.row {
+  align-items: center;
+  padding: .3em; }
 
 /*# sourceMappingURL=styles.css.map */
