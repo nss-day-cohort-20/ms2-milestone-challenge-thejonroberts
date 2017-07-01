@@ -1,3 +1,14 @@
+nav {
+  height: 13vh; }
+
+textarea {
+  width: 90%;
+  height: 12vh; }
+
+.container-fluid {
+  height: 86vh;
+  overflow: scroll; }
+
 .col {
   border: 1px solid black;
   padding: .3em;
