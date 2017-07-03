@@ -1,22 +1,15 @@
 nav {
   height: 13vh; }
 
-textarea {
-  width: 90%;
-  height: 12vh; }
-
 .container-fluid {
   height: 86vh;
   overflow: scroll; }
 
-.col {
-  border: 1px solid black;
-  padding: .3em;
-  margin: 0 .3em; }
+.col-sm-4 {
+  border: 1px solid black; }
 
 .row {
-  align-items: center;
-  padding: .3em; }
+  align-items: center; }
 
 .selectedBorder {
   border: 4px solid #617;
