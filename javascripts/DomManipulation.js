@@ -8,10 +8,9 @@ var CarLot = (function (globalScopeCarLot) {
 	let currentCar = {};
 	let originalText = "";
 
+	//setup listener for car selection
 	domChanges.targetCar = function() {
-		console.log('targetCar');
 		let carBoxes = document.querySelectorAll(".carBox");
-		//add listener to select a car to edit
 		carBoxes.forEach( function(carBox) {
 			carBox.addEventListener( "click", function() {
 				currentCar = carBox;
@@ -19,7 +18,7 @@ var CarLot = (function (globalScopeCarLot) {
 				enableFormInput();
 				watchForInputCancel();
 				watchForChangeSubmission();
-			} );
+			});
 		});
 	};
 
@@ -53,7 +52,6 @@ var CarLot = (function (globalScopeCarLot) {
 		inputForm.addEventListener("submit", handleChangeSubmission, false);
 	}
 	function handleChangeSubmission() {
-		console.log('handleChangeSubmission');
 		document.removeEventListener( "focusout", cancelInputChange, false);
 		//write changes to array QUESTION
 		CarLot.Inventory.changeDescription(currentCar.id, inputTextField.value);
@@ -68,7 +66,6 @@ var CarLot = (function (globalScopeCarLot) {
 	}
 
 	function cancelInputChange() {
-		console.log('cancelInputChange');
 		currentCar.lastChild.innerText= originalText;
 		removeBorders();
 	}
