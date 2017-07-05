@@ -49,6 +49,9 @@ var CarLot = (function (globalScopeCarLot) {
 		});
 	}
 
+	function watchForChangeSubmission() {
+		inputForm.addEventListener("submit", handleChangeSubmission, false);
+	}
 	function handleChangeSubmission() {
 		console.log('handleChangeSubmission');
 		document.removeEventListener( "focusout", cancelInputChange, false);
@@ -57,10 +60,6 @@ var CarLot = (function (globalScopeCarLot) {
 		removeBorders();
 		disableFormInput();
 		currentCar = {};
-	}
-
-	function watchForChangeSubmission() {
-		inputForm.addEventListener("submit", handleChangeSubmission, false);
 	}
 
 	function watchForInputCancel() {
