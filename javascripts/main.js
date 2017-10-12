@@ -1,0 +1,1 @@
+CarLot.Inventory.loadInventory();
